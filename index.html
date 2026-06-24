@@ -38,30 +38,12 @@
         /* Header */
         header { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.85); backdrop-filter: blur(15px); border-bottom: 1px solid #f2f4f6; }
         header .inner { height: 72px; display: flex; justify-content: space-between; align-items: center; }
-        .logo {
-    display: flex;
-    align-items: center;
-    height: 100%; 
-}
-
-.logo a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-}
-
-.logo img {
-    height: 70px;
-    width: auto;
-    
-}
-
-/* (선택 사항) 모바일 전용 로고 크기 조절 */
-@media (max-width: 768px) {
-    .logo img {
-        height: 70px; /* 모바일에서는 조금 더 작게 설정 */
-    }
-}
+        .logo { display: flex; align-items: center; height: 100%; }
+        .logo a { display: flex; align-items: center; text-decoration: none; }
+        .logo img { height: 70px; width: auto; }
+        @media (max-width: 768px) {
+            .logo img { height: 70px; }
+        }
         .header-btn { background: var(--primary); color: white; padding: 12px 24px; border-radius: 14px; font-size: 1rem; font-weight: 600; text-decoration: none; transition: 0.2s; }
 
         /* Hero Section */
@@ -158,9 +140,8 @@ src="https://www.facebook.com/tr?id=1262157532145864&ev=PageView&noscript=1"
     <header>
         <div class="inner">
             <div class="logo">
-    <a href="/"> <img src="https://i.imgur.com/aympMji.png" alt="선심파트너스 로고">
-    </a>
-</div>
+                <a href="/"> <img src="https://i.imgur.com/aympMji.png" alt="선심파트너스 로고"></a>
+            </div>
             <a href="#apply" class="header-btn">무료 진단 신청</a>
         </div>
     </header>
@@ -307,7 +288,7 @@ src="https://www.facebook.com/tr?id=1262157532145864&ev=PageView&noscript=1"
             </div>
         </div>
     </section>
-
+    
     <section class="form-section" id="apply">
         <div class="inner">
             <h2 class="section-title text-center" data-fade>지금 무료 진단을 신청하세요</h2>
@@ -327,45 +308,39 @@ src="https://www.facebook.com/tr?id=1262157532145864&ev=PageView&noscript=1"
                             <select name="type">
                                 <option value="법인사업자">법인사업자</option>
                                 <option value="개인사업자">개인사업자</option>
-                                <option value="예비창업자">예비창업자</option>
                             </select>
                         </div>
                         <div class="input-group full-width">
                             <label>주요 업종</label>
                             <input type="text" name="industry" required placeholder="예) 제조업, 정보통신업">
                         </div>
+                        
+                        <div class="input-group full-width">
+                            <label>사업 업력</label>
+                            <select name="history" required>
+                                <option value="" disabled selected>업력을 선택해주세요</option>
+                                <option value="1년 미만">1년 미만</option>
+                                <option value="3년 이하">3년 이하</option>
+                                <option value="3년 이상">3년 이상</option>
+                            </select>
+                        </div>
+                        
+                        <div class="input-group full-width">
+                            <label>연 매출</label>
+                            <select name="revenue" required>
+                                <option value="" disabled selected>매출 규모를 선택해주세요</option>
+                                <option value="1억 미만">1억 미만</option>
+                                <option value="1억 이상 ~ 10억 미만">1억 이상 ~ 10억 미만</option>
+                                <option value="10억 이상 ~ 30억 미만">10억 이상 ~ 30억 미만</option>
+                                <option value="30억 이상 ~ 50억 미만">30억 이상 ~ 50억 미만</option>
+                                <option value="50억 이상 ~ 100억 미만">50억 이상 ~ 100억 미만</option>
+                                <option value="100억 이상">100억 이상</option>
+                            </select>
+                        </div>
+                        
                         <div class="full-width">
                             <button type="submit" class="btn-full" style="width:100%;">무료 가능성 진단 신청하기</button>
                         </div>
-                    </div>
-                </form>
-            </div> </div> </section>
-
-<script>
-    // 폼 제출 이벤트 처리
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbzZJj8554b7QfYcO_shimNL2cNEmHlWRLm7Kz2-Z1P58t3kyvRBcKZxY8wv96pTGQDE/exec'; // 2단계에서 복사한 URL
-    const form = document.getElementById('consultForm');
-
-    form.addEventListener('submit', e => {
-        e.preventDefault();
-        const submitBtn = form.querySelector('button');
-        submitBtn.innerText = '전송 중...';
-        submitBtn.disabled = true;
-
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => {
-                alert('신청이 성공적으로 완료되었습니다. 곧 담당자가 연락드리겠습니다!');
-                submitBtn.innerText = '신청 완료';
-                form.reset();
-            })
-            .catch(error => {
-                alert('오류가 발생했습니다. 다시 시도해주세요.');
-                submitBtn.disabled = false;
-                submitBtn.innerText = '무료 가능성 진단 신청하기';
-            });
-    });
-</script>
-</div>
                     </div>
                 </form>
             </div>
@@ -386,6 +361,7 @@ src="https://www.facebook.com/tr?id=1262157532145864&ev=PageView&noscript=1"
 </div>
 
 <script>
+    // 스크롤 애니메이션 옵저버
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -395,6 +371,102 @@ src="https://www.facebook.com/tr?id=1262157532145864&ev=PageView&noscript=1"
     }, { threshold: 0.1 });
 
     document.querySelectorAll('[data-fade]').forEach(el => observer.observe(el));
+
+    // 폼 및 구글 스프레드시트 연동 스크립트
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzZJj8554b7QfYcO_shimNL2cNEmHlWRLm7Kz2-Z1P58t3kyvRBcKZxY8wv96pTGQDE/exec'; 
+    const form = document.getElementById('consultForm');
+    const telInput = form.querySelector('input[name="tel"]');
+
+    // 연락처 자동 하이픈(-) 추가 기능
+    telInput.addEventListener("input", function(e) {
+        let val = e.target.value.replace(/[^0-9]/g, '');
+        let formattedTel = '';
+
+        if (val.substring(0, 2) === "02") {
+            if (val.length < 3) formattedTel = val;
+            else if (val.length < 6) formattedTel = val.substring(0, 2) + '-' + val.substring(2);
+            else if (val.length < 10) formattedTel = val.substring(0, 2) + '-' + val.substring(2, 5) + '-' + val.substring(5);
+            else formattedTel = val.substring(0, 2) + '-' + val.substring(2, 6) + '-' + val.substring(6, 10);
+        } else {
+            if (val.length < 4) formattedTel = val;
+            else if (val.length < 7) formattedTel = val.substring(0, 3) + '-' + val.substring(3);
+            else if (val.length < 11) formattedTel = val.substring(0, 3) + '-' + val.substring(3, 6) + '-' + val.substring(6);
+            else formattedTel = val.substring(0, 3) + '-' + val.substring(3, 7) + '-' + val.substring(7, 11);
+        }
+        e.target.value = formattedTel;
+    });
+
+    // 폼 제출 시 유효성 검사 및 데이터 전송
+    form.addEventListener('submit', e => {
+        e.preventDefault(); // 기본 제출 방지
+
+        // 입력값 가져오기
+        const name = form.querySelector('input[name="name"]').value.trim();
+        const tel = form.querySelector('input[name="tel"]').value.trim();
+        const industry = form.querySelector('input[name="industry"]').value.trim();
+        const history = form.querySelector('select[name="history"]').value;
+        const revenue = form.querySelector('select[name="revenue"]').value;
+
+        // 1. 이름 검사 (한글/영문 2자 이상)
+        const nameRegex = /^[가-힣a-zA-Z\s]{2,}$/;
+        if (!nameRegex.test(name)) {
+            alert("대표자 성함을 올바르게 입력해주세요. (한글 또는 영문 2자 이상)");
+            form.querySelector('input[name="name"]').focus();
+            return;
+        }
+
+        // 2. 연락처 검사 (형식 확인)
+        const telRegex = /^(01[016789]|02|0[3-9][0-9])-\d{3,4}-\d{4}$/;
+        if (!telRegex.test(tel)) {
+            alert("연락처를 올바른 형식으로 입력해주세요.");
+            form.querySelector('input[name="tel"]').focus();
+            return;
+        }
+
+        // 3. 주요 업종 빈칸 검사
+        if (industry === "") {
+            alert("주요 업종을 입력해주세요.");
+            form.querySelector('input[name="industry"]').focus();
+            return;
+        }
+
+        // 4. 드롭다운 미선택 검사
+        if (!history) {
+            alert("사업 업력을 선택해주세요.");
+            form.querySelector('select[name="history"]').focus();
+            return;
+        }
+        if (!revenue) {
+            alert("연 매출 규모를 선택해주세요.");
+            form.querySelector('select[name="revenue"]').focus();
+            return;
+        }
+
+        // 5. 최종 제출 전 확인 알림창 (추가된 부분)
+        const isAgreed = confirm("정책자금은 정부에서 집행하는 대출입니다. 지원금과는 성격이 다릅니다. 정확하게 인지하셨습니까?");
+        if (!isAgreed) {
+            // 사용자가 '취소'를 누르면 여기서 멈춥니다.
+            return; 
+        }
+
+        // 검사 통과 및 확인 시 버튼 상태 변경 및 구글 시트로 전송
+        const submitBtn = form.querySelector('button');
+        submitBtn.innerText = '전송 중...';
+        submitBtn.disabled = true;
+
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                alert('신청이 성공적으로 완료되었습니다. 곧 담당자가 연락드리겠습니다!');
+                submitBtn.innerText = '무료 가능성 진단 신청하기'; // 완료 후 원래대로 변경
+                submitBtn.disabled = false;
+                form.reset();
+            })
+            .catch(error => {
+                alert('오류가 발생했습니다. 다시 시도해주세요.');
+                submitBtn.disabled = false;
+                submitBtn.innerText = '무료 가능성 진단 신청하기';
+            });
+    });
 </script>
 
 </body>
