@@ -7,116 +7,376 @@
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" />
     <style>
         :root {
-            --primary: #3182f6;
-            --primary-dark: #1b64da;
-            --bg: #ffffff;
-            --section-bg: #f9fafb;
-            --text-main: #191f28;
-            --text-sub: #4e5968;
-            --text-light: #8b95a1;
-            --accent: #f04452;
-            --succes: #00d084;
-            --radius-lg: 32px;
-            --radius-md: 24px;
-            --shadow: 0 12px 48px rgba(0,0,0,0.08);
-            --max-width: 1100px; /* 데스크톱 최대 폭 */
+            --primary: #111111;
+            --primary-light: #333333;
+            --bg: #FAF9F5; /* 크림색 배경 */
+            --card-bg: #ffffff;
+            --text-main: #111111;
+            --text-sub: #555555;
+            --accent: #FF4B2B; /* 레드오렌지 포인트 컬러 */
+            --accent-light: #FFEBE7;
+            --lime: #E4FF4B;
+            --border-stroke: 2px solid #111111; /* 강한 검정 라인 */
+            --hard-shadow: 4px 4px 0px #111111; /* 하드 섀도우 */
+            --hard-shadow-lg: 8px 8px 0px #111111;
+            --radius-round: 16px;
+            --radius-sticker: 8px;
+            --max-width: 1200px;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Pretendard', sans-serif; -webkit-font-smoothing: antialiased; }
-        body { background-color: var(--bg); color: var(--text-main); line-height: 1.6; overflow-x: hidden; letter-spacing: -0.3px; }
+        body { background-color: var(--bg); color: var(--text-main); line-height: 1.5; overflow-x: hidden; letter-spacing: -0.5px; }
         
         /* Layout */
         .container { width: 100%; margin: 0 auto; position: relative; }
         .inner { max-width: var(--max-width); margin: 0 auto; width: 100%; padding: 0 24px; }
-        section { padding: 120px 0; }
+        section { padding: 100px 0; border-bottom: var(--border-stroke); }
         .text-center { text-align: center; }
 
         /* Animation */
-        [data-fade] { opacity: 0; transform: translateY(30px); transition: 1s ease-out; }
+        [data-fade] { opacity: 0; transform: translateY(20px); transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
         [data-fade].visible { opacity: 1; transform: translateY(0); }
 
         /* Header */
-        header { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.85); backdrop-filter: blur(15px); border-bottom: 1px solid #f2f4f6; }
-        header .inner { height: 72px; display: flex; justify-content: space-between; align-items: center; }
+        header { position: sticky; top: 0; z-index: 100; background: var(--bg); border-bottom: var(--border-stroke); }
+        header .inner { height: 80px; display: flex; justify-content: space-between; align-items: center; }
         .logo { display: flex; align-items: center; height: 100%; }
         .logo a { display: flex; align-items: center; text-decoration: none; }
-        .logo img { height: 70px; width: auto; }
-        @media (max-width: 768px) {
-            .logo img { height: 70px; }
+        .logo img { height: 60px; width: auto; filter: grayscale(1); } /* 미니멀 편집숍 무드를 위한 그레이스케일 처리 */
+        
+        .header-btn { 
+            background: var(--accent); 
+            color: white; 
+            padding: 12px 24px; 
+            border: var(--border-stroke);
+            border-radius: var(--radius-round); 
+            font-size: 0.95rem; 
+            font-weight: 700; 
+            text-decoration: none; 
+            box-shadow: 2px 2px 0px #111111;
+            transition: all 0.2s; 
         }
-        .header-btn { background: var(--primary); color: white; padding: 12px 24px; border-radius: 14px; font-size: 1rem; font-weight: 600; text-decoration: none; transition: 0.2s; }
+        .header-btn:hover { transform: translate(-1px, -1px); box-shadow: 3px 3px 0px #111111; }
 
-        /* Hero Section */
-        .hero { padding-top: 100px; padding-bottom: 80px; }
-        .hero .inner { display: flex; flex-direction: column; align-items: center; text-align: center; }
-        .hero-badge { color: var(--primary); font-weight: 700; font-size: 1.1rem; margin-bottom: 20px; background: #e8f3ff; padding: 6px 16px; border-radius: 10px; }
-        h1 { font-size: clamp(32px, 5vw, 56px); font-weight: 800; line-height: 1.25; letter-spacing: -2px; margin-bottom: 32px; }
-        h1 span { color: var(--primary); }
-        .hero-desc { font-size: clamp(18px, 2vw, 22px); color: var(--text-sub); margin-bottom: 48px; }
-        .trust-tags { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin-bottom: 56px; }
-        .trust-tag { background: var(--section-bg); color: var(--text-sub); padding: 10px 20px; border-radius: 50px; font-size: 15px; font-weight: 600; border: 1px solid #eee; }
+        /* Hero Section (좌우 분할 구조) */
+        .hero { padding-top: 80px; padding-bottom: 100px; background: #FFFDF9; }
+        .hero .inner { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: center; }
+        
+        .hero-text { display: flex; flex-direction: column; align-items: flex-start; }
+        .hero-badge { 
+            color: var(--text-main); 
+            font-weight: 800; 
+            font-size: 0.85rem; 
+            margin-bottom: 24px; 
+            background: var(--lime); 
+            padding: 6px 14px; 
+            border: var(--border-stroke);
+            border-radius: 50px; 
+            display: inline-block;
+            text-transform: uppercase;
+            box-shadow: 2px 2px 0px #111111;
+        }
+        
+        h1 { font-size: clamp(34px, 4.5vw, 52px); font-weight: 900; line-height: 1.2; letter-spacing: -2.5px; margin-bottom: 28px; word-break: keep-all; }
+        h1 span.highlight { background: var(--lime); padding: 0 4px; border: var(--border-stroke); display: inline-block; transform: rotate(-1deg); margin: 2px 0; }
+        h1 span.accent-text { color: var(--accent); }
+        
+        .hero-desc { font-size: clamp(16px, 1.8vw, 19px); color: var(--text-sub); margin-bottom: 40px; font-weight: 500; line-height: 1.6; word-break: keep-all; }
+        
+        .trust-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 40px; }
+        .trust-tag { 
+            background: var(--card-bg); 
+            color: var(--text-main); 
+            padding: 8px 16px; 
+            border-radius: var(--radius-sticker); 
+            font-size: 14px; 
+            font-weight: 700; 
+            border: var(--border-stroke); 
+            box-shadow: 2px 2px 0px #111111;
+        }
+
+        /* Hero Dashboard Graphic (우측 시각 요소) */
+        .hero-graphic { position: relative; width: 100%; display: flex; justify-content: center; }
+        .dashboard-mock {
+            background: var(--card-bg);
+            border: var(--border-stroke);
+            border-radius: var(--radius-round);
+            padding: 32px;
+            width: 100%;
+            max-width: 440px;
+            box-shadow: var(--hard-shadow-lg);
+            position: relative;
+        }
+        .mock-header { display: flex; justify-content: space-between; align-items: center; border-bottom: var(--border-stroke); padding-bottom: 16px; margin-bottom: 20px; }
+        .mock-dot-group { display: flex; gap: 6px; }
+        .mock-dot { width: 10px; height: 10px; background: #111; border-radius: 50%; }
+        .mock-title { font-size: 13px; font-weight: 800; background: #111; color: #fff; padding: 2px 8px; border-radius: 4px; }
+        .mock-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+        .mock-label { font-size: 14px; font-weight: 700; color: var(--text-sub); }
+        .mock-value { font-size: 15px; font-weight: 800; color: var(--text-main); }
+        .mock-progress-container { background: #EEE; height: 12px; border: var(--border-stroke); border-radius: 6px; overflow: hidden; margin: 16px 0; }
+        .mock-progress-bar { width: 97.4%; background: var(--accent); height: 100%; }
+        .mock-sticker {
+            position: absolute;
+            bottom: -15px;
+            right: -15px;
+            background: var(--lime);
+            border: var(--border-stroke);
+            padding: 10px 16px;
+            font-weight: 900;
+            font-size: 14px;
+            transform: rotate(4deg);
+            box-shadow: 3px 3px 0px #111111;
+            border-radius: var(--radius-sticker);
+        }
 
         /* Problem Section */
-        .problem { background: var(--section-bg); border-radius: 60px 60px 0 0; }
-        .section-title { font-size: clamp(28px, 4vw, 40px); font-weight: 800; margin-bottom: 60px; line-height: 1.3; }
-        .problem-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
-        .problem-card { background: white; padding: 40px 32px; border-radius: var(--radius-md); box-shadow: var(--shadow); }
-        .problem-card .icon { font-size: 40px; margin-bottom: 24px; display: block; }
-        .problem-card h4 { font-size: 20px; font-weight: 700; margin-bottom: 12px; }
+        .problem { background: var(--bg); }
+        .section-title { font-size: clamp(28px, 3.5vw, 38px); font-weight: 900; margin-bottom: 64px; line-height: 1.3; letter-spacing: -1.5px; word-break: keep-all; }
+        .section-title span.underline { border-bottom: 4px solid var(--accent); }
+        .problem-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; }
+        .problem-card { 
+            background: var(--card-bg); 
+            padding: 36px 28px; 
+            border-radius: var(--radius-round); 
+            border: var(--border-stroke);
+            box-shadow: var(--hard-shadow);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s;
+        }
+        .problem-card:hover { transform: translateY(-4px); }
+        .problem-card .icon { font-size: 32px; margin-bottom: 20px; display: inline-block; width: fit-content; padding: 6px; background: #FAF9F5; border: 1px solid #111; border-radius: 8px; }
+        .problem-card h4 { font-size: 19px; font-weight: 800; margin-bottom: 12px; letter-spacing: -0.5px; }
+        .problem-card p { font-size: 14px; color: var(--text-sub); font-weight: 500; line-height: 1.5; }
 
         /* Solution Section */
-        .solution-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
-        .solution-item { background: var(--section-bg); padding: 40px; border-radius: var(--radius-md); display: flex; flex-direction: column; gap: 24px; }
-        .icon-wrap { font-size: 36px; background: white; width: 72px; height: 72px; display: flex; align-items: center; justify-content: center; border-radius: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.04); }
+        .solution { background: #FFFDF9; }
+        .solution-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+        .solution-item { 
+            background: var(--card-bg); 
+            padding: 40px; 
+            border-radius: var(--radius-round); 
+            border: var(--border-stroke);
+            box-shadow: var(--hard-shadow);
+            display: flex; flex-direction: column; gap: 20px; 
+        }
+        .icon-wrap { 
+            font-size: 32px; 
+            background: var(--lime); 
+            width: 64px; height: 64px; 
+            display: flex; align-items: center; justify-content: center; 
+            border-radius: var(--radius-round); 
+            border: var(--border-stroke);
+            box-shadow: 2px 2px 0px #111111;
+        }
+        .solution-item h4 { font-size: 20px; font-weight: 800; }
+        .solution-item p { font-size: 15px; color: var(--text-sub); font-weight: 500; }
 
-        /* Stats Section */
-        .stats-wrap { background: var(--primary); padding: 80px 0; border-radius: 60px; margin: 0 24px; }
-        .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); text-align: center; color: white; }
-        .stat-item .label { font-size: 18px; opacity: 0.8; margin-bottom: 12px; display: block; }
-        .stat-item .value { font-size: clamp(32px, 5vw, 52px); font-weight: 800; }
+        /* Stats Section (타이포 중심 에디토리얼 재구성) */
+        .stats-wrap { background: var(--text-main); color: white; padding: 90px 0; border-bottom: var(--border-stroke); }
+        .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); text-align: center; }
+        .stat-item { border-right: 2px solid rgba(255,255,255,0.15); padding: 10px 0; }
+        .stat-item:last-child { border-right: none; }
+        .stat-item .label { font-size: 15px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #AAAAAA; margin-bottom: 12px; display: block; }
+        .stat-item .value { font-size: clamp(36px, 5.5vw, 64px); font-weight: 900; color: var(--lime); letter-spacing: -2px; line-height: 1; }
 
         /* Policy Details */
-        .policy-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px; }
-        .policy-card { background: white; padding: 48px 36px; border-radius: var(--radius-md); box-shadow: var(--shadow); border: 1px solid #f2f4f6; }
-        .policy-info-group { background: var(--section-bg); padding: 24px; border-radius: 20px; margin-top: 24px; }
-        .policy-info-row { display: flex; justify-content: space-between; padding-bottom: 14px; margin-bottom: 14px; border-bottom: 1px solid #eee; }
+        .policy-detail { background: var(--bg); }
+        .policy-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+        .policy-card { 
+            background: var(--card-bg); 
+            padding: 40px 32px; 
+            border-radius: var(--radius-round); 
+            border: var(--border-stroke);
+            box-shadow: var(--hard-shadow);
+        }
+        .policy-card h3 { font-size: 24px; font-weight: 900; margin-bottom: 8px; display: inline-block; border-bottom: 3px solid #111; padding-bottom: 2px; }
+        .policy-card > p { font-size: 14.5px; color: var(--text-sub); margin-bottom: 24px; font-weight: 500; height: 44px; display: flex; align-items: center; }
+        .policy-info-group { background: #FAF9F5; padding: 20px; border-radius: var(--radius-round); border: var(--border-stroke); }
+        .policy-info-row { display: flex; justify-content: space-between; padding-bottom: 12px; margin-bottom: 12px; border-bottom: 1px dashed #111111; font-size: 14px; }
+        .policy-info-row:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+        .policy-info-row span:first-child { font-weight: 800; color: var(--text-main); }
+        .policy-info-row span:last-child { font-weight: 700; color: var(--text-sub); }
 
         /* Extra Section (Venture/Lab) */
-        .extra { background: var(--text-main); color: white; border-radius: 60px; margin: 0 24px; }
-        .extra-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 60px; }
-        .extra-card { background: rgba(255,255,255,0.05); padding: 48px; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.1); }
-
+        .extra { background: #FFFDF9; }
+        .extra-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 48px; }
+        .extra-card { 
+            background: var(--card-bg); 
+            padding: 40px; 
+            border-radius: var(--radius-round); 
+            border: var(--border-stroke);
+            box-shadow: var(--hard-shadow);
+        }
+        .extra-card h3 { font-size: 21px; font-weight: 800; margin-bottom: 14px; }
+        .extra-card p { font-size: 15px; color: var(--text-sub); font-weight: 500; }
+        
         /* Refund */
-        .refund { background: #fff0f0; border: 2px solid #ffdbdb; border-radius: var(--radius-md); padding: 80px 24px; margin-top: 60px; }
+        .refund { 
+            background: var(--accent-light); 
+            border: var(--border-stroke); 
+            border-radius: var(--radius-round); 
+            padding: 60px 24px; 
+            margin-top: 56px; 
+            box-shadow: var(--hard-shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        .refund-badge {
+            position: absolute;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%) rotate(-2deg);
+            background: #111;
+            color: #fff;
+            padding: 4px 12px;
+            font-size: 11px;
+            font-weight: 800;
+            border-radius: 4px;
+        }
 
         /* Form Section */
-        .form-box { max-width: 600px; margin: 0 auto; background: var(--section-bg); padding: 60px; border-radius: var(--radius-md); }
-        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .form-section { background: var(--bg); }
+        .form-box { 
+            max-width: 580px; 
+            margin: 0 auto; 
+            background: var(--card-bg); 
+            padding: 48px 36px; 
+            border-radius: var(--radius-round); 
+            border: var(--border-stroke);
+            box-shadow: var(--hard-shadow-lg);
+        }
+        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
         .full-width { grid-column: span 2; }
-        .input-group input, .input-group select { width: 100%; padding: 20px; border-radius: 16px; border: 1px solid #ddd; font-size: 16px; }
+        
+        .input-group { display: flex; flex-direction: column; gap: 8px; }
+        .input-group label { font-size: 14px; font-weight: 800; color: var(--text-main); text-indent: 2px; }
+        .input-group input, .input-group select { 
+            width: 100%; 
+            padding: 16px; 
+            border-radius: var(--radius-sticker); 
+            border: var(--border-stroke); 
+            font-size: 15px; 
+            font-weight: 600;
+            background: #FFFDF9;
+            color: var(--text-main);
+            outline: none;
+            transition: all 0.2s;
+        }
+        .input-group input:focus, .input-group select:focus {
+            background: #ffffff;
+            box-shadow: 2px 2px 0px var(--accent);
+        }
+        .input-group input::placeholder { color: #A0A0A0; font-weight: 400; }
 
         /* Buttons */
-        .btn-full { background: var(--primary); color: white; padding: 24px; border-radius: 20px; font-size: 20px; font-weight: 800; border: none; cursor: pointer; text-align: center; text-decoration: none; display: block; box-shadow: 0 10px 30px rgba(49,130,246,0.3); transition: 0.3s; }
-        .btn-full:hover { transform: translateY(-5px); background: var(--primary-dark); }
+        .btn-full { 
+            background: var(--accent); 
+            color: white; 
+            padding: 20px; 
+            border-radius: var(--radius-round); 
+            font-size: 18px; 
+            font-weight: 900; 
+            border: var(--border-stroke); 
+            cursor: pointer; 
+            text-align: center; 
+            text-decoration: none; 
+            display: block; 
+            box-shadow: var(--hard-shadow); 
+            transition: all 0.2s; 
+            width: 100%;
+        }
+        .btn-full:hover { 
+            transform: translate(-2px, -2px); 
+            box-shadow: 6px 6px 0px #111111; 
+        }
+        .btn-full:disabled {
+            background: #CCCCCC;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
 
         /* Footer */
-        footer { background: #f2f4f6; padding: 80px 0; margin-top: 100px; }
+        footer { background: var(--text-main); color: #888888; padding: 64px 0 80px; font-size: 13px; line-height: 1.8; }
+        footer p { margin-bottom: 4px; }
+        footer p strong { color: #ffffff; font-weight: 700; }
         
-        /* Float CTA (모바일전용) */
-        .float-cta { display: none; position: fixed; bottom: 0; left: 0; width: 100%; padding: 16px 24px 30px; background: white; z-index: 90; }
+        /* Float CTA (모바일전용 고정바 디자인 고도화) */
+        .float-cta { 
+            display: none; 
+            position: fixed; 
+            bottom: 0; 
+            left: 0; 
+            width: 100%; 
+            padding: 12px 20px 24px; 
+            background: var(--bg); 
+            z-index: 99; 
+            border-top: var(--border-stroke);
+        }
 
-        /* Responsive */
+
+
+        /* Horizontal Ticker */
+        .ticker {
+            overflow: hidden;
+            width: 100%;
+            background: var(--text-main);
+            color: #ffffff;
+            border-bottom: var(--border-stroke);
+            position: relative;
+        }
+        .ticker-track {
+            display: flex;
+            width: max-content;
+            animation: tickerMove 24s linear infinite;
+            will-change: transform;
+        }
+        .ticker span {
+            display: block;
+            padding: 16px 24px;
+            font-size: 16px;
+            font-weight: 900;
+            letter-spacing: -0.4px;
+            white-space: nowrap;
+        }
+        .ticker em {
+            color: var(--lime);
+            font-style: normal;
+        }
+        @keyframes tickerMove {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
         @media (max-width: 768px) {
-            section { padding: 80px 0; }
-            .stats-grid { grid-template-columns: 1fr; gap: 40px; }
+            .ticker span {
+                padding: 13px 18px;
+                font-size: 14px;
+            }
+        }
+
+        /* Responsive (반응형 최적화) */
+        @media (max-width: 992px) {
+            .hero .inner { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+            .hero-text { align-items: center; }
+            .trust-tags { justify-content: center; }
+            .hero-graphic { order: -1; margin-bottom: 12px; } /* 모바일성 구조에서 비주얼 카드 상단 배치 */
+        }
+        
+        @media (max-width: 768px) {
+            section { padding: 70px 0; }
+            .stats-grid { grid-template-columns: 1fr; gap: 24px; }
+            .stat-item { border-right: none; border-bottom: 1px dashed rgba(255,255,255,0.2); padding-bottom: 24px; }
+            .stat-item:last-child { border-bottom: none; padding-bottom: 0; }
             .extra-grid { grid-template-columns: 1fr; }
             .form-grid { grid-template-columns: 1fr; }
             .full-width { grid-column: span 1; }
             .float-cta { display: block; }
-            .stats-wrap, .extra { margin: 0; border-radius: 0; }
+            footer { padding-bottom: 120px; } /* 하단 고정바 공간 확보 */
+            .form-box { padding: 36px 20px; }
         }
     </style>
-<!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -132,7 +392,6 @@ fbq('track', 'PageView');
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1262157532145864&ev=PageView&noscript=1"
 /></noscript>
-<!-- End Meta Pixel Code -->
 </head>
 <body>
 
@@ -147,43 +406,103 @@ src="https://www.facebook.com/tr?id=1262157532145864&ev=PageView&noscript=1"
     </header>
 
     <section class="hero">
-        <div class="inner" data-fade>
-            <span class="hero-badge">기업금융 R&D 컨설팅 전문</span>
-            <h1>정부기관이 주는<br><span>수억 원의 성장 기회</span><br>아직도 <span style="color: red;">놓치고 계십니까?</span></h1>
-            <p class="hero-desc">우리 회사 성공지원센터의 1,200억 실행 데이터가<br>대표님의 기업에 가장 확실한 승인 지도를 그립니다.</p>
-            
-            <div class="trust-tags">
-                <span class="trust-tag">누적 실행 1,200억+</span>
-                <span class="trust-tag">평균 승인율 97%</span>
-                <span class="trust-tag">최단 2주 내 실행</span>
-                <span class="trust-tag">부결 시 100% 환불</span>
+        <div class="inner">
+            <div class="hero-text" data-fade>
+                <span class="hero-badge">기업금융 R&D 컨설팅 전문</span>
+                <h1>정부기관이 주는<br><span class="highlight">수억 원의 성장 기회</span><br>아직도 <span class="accent-text">놓치고 계십니까?</span></h1>
+                <p class="hero-desc">우리 회사 성공지원센터의 1,200억 실행 데이터가<br>대표님의 기업에 가장 확실한 승인 지도를 그립니다.</p>
+                
+                <div class="trust-tags">
+                    <span class="trust-tag">누적 실행 1,200억+</span>
+                    <span class="trust-tag">평균 승인율 97%</span>
+                    <span class="trust-tag">최단 2주 내 실행</span>
+                    <span class="trust-tag">부결 시 100% 환불</span>
+                </div>
+                
+                <a href="#apply" class="btn-full" style="padding: 20px 40px; width: auto; display: inline-block;">우리 회사 정책자금 가능성 확인하기</a>
             </div>
             
-            <a href="#apply" class="btn-full" style="padding: 24px 60px;">우리 회사 정책자금 가능성 확인하기</a>
+            <div class="hero-graphic" data-fade>
+                <div class="dashboard-mock">
+                    <div class="mock-header">
+                        <div class="mock-dot-group">
+                            <div class="mock-dot"></div>
+                            <div class="mock-dot"></div>
+                            <div class="mock-dot"></div>
+                        </div>
+                        <div class="mock-title">LIVE STATUS</div>
+                    </div>
+                    <div class="mock-row">
+                        <span class="mock-label">정책자금 추천 인덱스</span>
+                        <span class="mock-value" style="color:var(--accent);">OPTIMAL (최적)</span>
+                    </div>
+                    <div class="mock-row">
+                        <span class="mock-label">시뮬레이션 분석 데이터</span>
+                        <span class="mock-value">1,200억 DB 매칭</span>
+                    </div>
+                    <div class="mock-row">
+                        <span class="mock-label">예상 매칭 승인율</span>
+                        <span class="mock-value" style="font-size:18px;">97.4%</span>
+                    </div>
+                    <div class="mock-progress-container">
+                        <div class="mock-progress-bar"></div>
+                    </div>
+                    <div class="mock-row" style="margin-bottom:0; padding-top:4px;">
+                        <span class="mock-label" style="font-size:12px;">Sunsim Partners R&D Center</span>
+                        <span class="mock-value" style="font-size:12px; font-weight:500;">진단 가동 중</span>
+                    </div>
+                    <div class="mock-sticker">분석 완료 ⚡</div>
+                </div>
+            </div>
         </div>
     </section>
 
+
+
+    <div class="ticker" aria-hidden="true">
+        <div class="ticker-track">
+            <span>정책자금 <em>가능성 진단</em></span>
+            <span>사업계획서 <em>승인 전략</em></span>
+            <span>기업부설연구소 <em>세액공제</em></span>
+            <span>벤처기업 인증 <em>한도 우대</em></span>
+            <span>부결 리스크 <em>사전 점검</em></span>
+            <span>정책자금 <em>가능성 진단</em></span>
+            <span>사업계획서 <em>승인 전략</em></span>
+            <span>기업부설연구소 <em>세액공제</em></span>
+            <span>벤처기업 인증 <em>한도 우대</em></span>
+            <span>부결 리스크 <em>사전 점검</em></span>
+        </div>
+    </div>
+
     <section class="problem">
         <div class="inner">
-            <h2 class="section-title text-center" data-fade>왜 대부분의 기업이<br>정책자금 앞에서 좌절할까요?</h2>
+            <h2 class="section-title text-center" data-fade>왜 대부분의 기업이<br><span class="underline">정책자금 앞에서 좌절</span>할까요?</h2>
             <div class="problem-grid">
                 <div class="problem-card" data-fade>
-                    <span class="icon">🔍</span>
+                    <div>
+                        <span class="icon">🔍</span>
+                    </div>
                     <h4>정보의 비대칭</h4>
                     <p>우리 기업에 딱 맞는 상품을 찾지 못하는 것이 첫 번째 실패 원인입니다.</p>
                 </div>
                 <div class="problem-card" data-fade>
-                    <span class="icon">📝</span>
+                    <div>
+                        <span class="icon">📝</span>
+                    </div>
                     <h4>서류 준비 미흡</h4>
                     <p>심사위원을 설득하지 못하는 사업계획서는 오히려 독이 됩니다.</p>
                 </div>
                 <div class="problem-card" data-fade>
-                    <span class="icon">🏛️</span>
+                    <div>
+                        <span class="icon">🏛️</span>
+                    </div>
                     <h4>기관 선택 오류</h4>
                     <p>업종과 성장 단계에 맞는 기관을 정밀하게 타겟팅해야 합니다.</p>
                 </div>
                 <div class="problem-card" data-fade>
-                    <span class="icon">🚫</span>
+                    <div>
+                        <span class="icon">🚫</span>
+                    </div>
                     <h4>부결 리스크</h4>
                     <p>한 번의 실수가 6개월의 재신청 금지라는 손실로 이어집니다.</p>
                 </div>
@@ -193,7 +512,7 @@ src="https://www.facebook.com/tr?id=1262157532145864&ev=PageView&noscript=1"
 
     <section class="solution">
         <div class="inner">
-            <h2 class="section-title text-center" data-fade>우리 회사 성공지원센터의<br><span>데이터 기반 맞춤 솔루션</span></h2>
+            <h2 class="section-title text-center" data-fade>우리 회사 성공지원센터의<br><span class="accent-text">데이터 기반 맞춤 솔루션</span></h2>
             <div class="solution-list">
                 <div class="solution-item" data-fade>
                     <div class="icon-wrap">📊</div>
@@ -270,7 +589,7 @@ src="https://www.facebook.com/tr?id=1262157532145864&ev=PageView&noscript=1"
 
     <section class="extra">
         <div class="inner">
-            <h2 class="section-title text-center" data-fade>자금 확보 그 이상,<br>기업의 가치를 높입니다</h2>
+            <h2 class="section-title text-center" data-fade>자금 확보 그 이상,<br><span class="underline">기업의 가치</span>를 높입니다</h2>
             <div class="extra-grid">
                 <div class="extra-card" data-fade>
                     <h3>🚀 벤처기업 인증</h3>
@@ -283,8 +602,9 @@ src="https://www.facebook.com/tr?id=1262157532145864&ev=PageView&noscript=1"
             </div>
             
             <div class="refund text-center" data-fade>
-                <h2 style="color:var(--accent);">미승인 시 100% 환불</h2>
-                <p style="color:var(--text-main); font-size: 1.2rem;">결과에 책임지지 못한다면 시작도 하지 않습니다.</p>
+                <div class="refund-badge">TRUST GUARANTEE</div>
+                <h2 style="color:var(--accent); font-weight: 900; font-size: clamp(24px, 3vw, 32px); margin-bottom: 8px;">미승인 시 100% 환불</h2>
+                <p style="color:var(--text-main); font-size: 1.1rem; font-weight: 600;">결과에 책임지지 못한다면 시작도 하지 않습니다.</p>
             </div>
         </div>
     </section>
@@ -338,8 +658,8 @@ src="https://www.facebook.com/tr?id=1262157532145864&ev=PageView&noscript=1"
                             </select>
                         </div>
                         
-                        <div class="full-width">
-                            <button type="submit" class="btn-full" style="width:100%;">무료 가능성 진단 신청하기</button>
+                        <div class="full-width" style="margin-top: 10px;">
+                            <button type="submit" class="btn-full">무료 가능성 진단 신청하기</button>
                         </div>
                     </div>
                 </form>
@@ -356,7 +676,7 @@ src="https://www.facebook.com/tr?id=1262157532145864&ev=PageView&noscript=1"
     </footer>
 
     <div class="float-cta">
-        <a href="#apply" class="btn-full">무료 진단 신청</a>
+        <a href="#apply" class="btn-full" style="padding: 16px;">무료 진단 신청</a>
     </div>
 </div>
 
