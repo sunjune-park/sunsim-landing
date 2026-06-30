@@ -786,14 +786,14 @@ src="https://www.facebook.com/tr?id=1262157532145864&ev=PageView&noscript=1"
                         </div>
                         
                         <div class="input-group full-width">
-    <label>사업 업력</label>
-    <select name="history" required>
-        <option value="" disabled selected>업력을 선택해주세요</option>
-        <option value="3년 미만">3년 미만</option>
-        <option value="3년 이상 7년 미만">3년 이상 7년 미만</option>
-        <option value="7년 이상">7년 이상</option>
-    </select>
-</div>
+                            <label>사업 업력</label>
+                            <select name="history" required>
+                                <option value="" disabled selected>업력을 선택해주세요</option>
+                                <option value="3년 미만">3년 미만</option>
+                                <option value="3년 이상 7년 미만">3년 이상 7년 미만</option>
+                                <option value="7년 이상">7년 이상</option>
+                            </select>
+                        </div>
                         
                         <div class="input-group full-width">
                             <label>연 매출</label>
@@ -880,57 +880,62 @@ src="https://www.facebook.com/tr?id=1262157532145864&ev=PageView&noscript=1"
         // 1. 이름 검사 (한글/영문 2자 이상)
         const nameRegex = /^[가-힣a-zA-Z\s]{2,}$/;
         if (!nameRegex.test(name)) {
+            e.stopImmediatePropagation(); // 메타 자동추적 차단
             alert("대표자 성함을 올바르게 입력해주세요. (한글 또는 영문 2자 이상)");
             form.querySelector('input[name="name"]').focus();
-            return;
+            return false;
         }
 
         // 2. 연락처 검사 (형식 확인)
         const telRegex = /^(01[016789]|02|0[3-9][0-9])-\d{3,4}-\d{4}$/;
         if (!telRegex.test(tel)) {
+            e.stopImmediatePropagation(); // 메타 자동추적 차단
             alert("연락처를 올바른 형식으로 입력해주세요.");
             form.querySelector('input[name="tel"]').focus();
-            return;
+            return false;
         }
 
         // 3. 주요 업종 빈칸 검사
         if (industry === "") {
+            e.stopImmediatePropagation(); // 메타 자동추적 차단
             alert("주요 업종을 입력해주세요.");
             form.querySelector('input[name="industry"]').focus();
-            return;
+            return false;
         }
 
         // 4. 드롭다운 미선택 검사
         if (!history) {
+            e.stopImmediatePropagation(); // 메타 자동추적 차단
             alert("사업 업력을 선택해주세요.");
             form.querySelector('select[name="history"]').focus();
-            return;
+            return false;
         }
         if (!revenue) {
+            e.stopImmediatePropagation(); // 메타 자동추적 차단
             alert("연 매출 규모를 선택해주세요.");
             form.querySelector('select[name="revenue"]').focus();
-            return;
+            return false;
         }
 
-        // 5. 최종 제출 전 확인 알림창 (추가된 부분)
+        // 5. 최종 제출 전 확인 알림창
         const isAgreed = confirm("정책자금은 정부에서 집행하는 대출입니다. 지원금과는 성격이 다릅니다. 정확하게 인지하셨습니까?");
         if (!isAgreed) {
-            // 사용자가 '취소'를 누르면 여기서 멈춥니다.
-            return; 
-        }
-
-        // 🎯 [추가된 픽셀 추적 코드] 확인을 누른 경우에만 전환 이벤트를 전송합니다.
-        if (typeof fbq === 'function') {
-            fbq('track', 'CompleteRegistration'); 
+            e.stopImmediatePropagation(); // 메타 자동추적 차단 (취소 누름)
+            return false; 
         }
 
         // 검사 통과 및 확인 시 버튼 상태 변경 및 구글 시트로 전송
-        const submitBtn = form.querySelector('button');
+        const submitBtn = form.querySelector('button[type="submit"]');
         submitBtn.innerText = '전송 중...';
         submitBtn.disabled = true;
 
         fetch(scriptURL, { method: 'POST', body: new FormData(form)})
             .then(response => {
+                // 🎯 구글 시트 전송이 완벽하게 성공한 이 시점에만 전환 픽셀을 전송합니다.
+                if (typeof fbq === 'function') {
+                    fbq('track', 'CompleteRegistration'); 
+                }
+
                 alert('신청이 성공적으로 완료되었습니다. 곧 담당자가 연락드리겠습니다!');
                 submitBtn.innerText = '무료 가능성 진단 신청하기'; // 완료 후 원래대로 변경
                 submitBtn.disabled = false;
