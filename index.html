@@ -919,6 +919,11 @@ src="https://www.facebook.com/tr?id=1262157532145864&ev=PageView&noscript=1"
             return; 
         }
 
+        // 🎯 [추가된 픽셀 추적 코드] 확인을 누른 경우에만 전환 이벤트를 전송합니다.
+        if (typeof fbq === 'function') {
+            fbq('track', 'CompleteRegistration'); 
+        }
+
         // 검사 통과 및 확인 시 버튼 상태 변경 및 구글 시트로 전송
         const submitBtn = form.querySelector('button');
         submitBtn.innerText = '전송 중...';
