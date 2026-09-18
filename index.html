@@ -15,6 +15,54 @@
   'https://connect.facebook.net/en_US/fbevents.js');
   fbq('init','1262157532145864');fbq('track','PageView');
   </script>
+
+  <style>
+    /* PC에서는 기존에 직접 잡아둔 줄바꿈을 그대로 유지 */
+    .pc-br {
+      display: inline;
+    }
+
+    /* 모바일에서는 PC용 강제 줄바꿈을 없애고 화면 폭에 맞게 자연스럽게 재배치 */
+    @media (max-width: 760px) {
+      .pc-br {
+        display: none;
+      }
+
+      .hero h1,
+      .hero-copy,
+      .statement,
+      .philosophy-foot p,
+      .business-intro h2,
+      .intro-copy,
+      .business-item p,
+      .founder-copy h2,
+      .founder-copy blockquote,
+      .process-head h2,
+      .process-desc,
+      .process-step p,
+      .insight-head h2,
+      .insight-row h3,
+      .closing-inner h2 {
+        word-break: keep-all;
+        overflow-wrap: break-word;
+      }
+
+      /* 모바일에서 긴 제목이 너무 빽빽해 보이지 않도록 줄간격만 소폭 보정 */
+      .hero h1 {
+        line-height: 1.12;
+      }
+
+      .statement,
+      .business-intro h2,
+      .founder-copy h2,
+      .process-head h2,
+      .insight-head h2,
+      .closing-inner h2 {
+        line-height: 1.2;
+      }
+    }
+  </style>
+
 </head>
 <body>
 <header class="site-header" id="siteHeader">
@@ -46,11 +94,11 @@
       <p class="hero-kicker reveal-up">SUSTAINABLE STRATEGY &amp; BUSINESS PARTNERS</p>
       <h1 class="reveal-up delay-1">
         <small class="hero-company">선심 비즈파트너스의</small>
-        바른 마음으로 만드는<br>
+        바른 마음으로 만드는<br class="pc-br">
         <span>더 나은 내일</span>
       </h1>
       <p class="hero-copy reveal-up delay-2">
-        기업의 현재를 정확히 진단하고,<br>
+        기업의 현재를 정확히 진단하고,<br class="pc-br">
         성장 단계에 필요한 제도와 실행 전략을 연결합니다.
       </p>
       <div class="hero-actions reveal-up delay-3">
@@ -82,13 +130,13 @@
         </div>
         <div>
           <p class="statement reveal-lines">
-            기업에 필요한 것은<br>
-            더 많은 정보가 아니라<br>
+            기업에 필요한 것은<br class="pc-br">
+            더 많은 정보가 아니라<br class="pc-br">
             <em>올바른 방향과 순서</em>입니다.
           </p>
           <div class="philosophy-foot reveal-up">
             <p>
-              인증, 자금, R&amp;D, 세제지원은 따로 떨어진 업무가 아닙니다.<br>
+              인증, 자금, R&amp;D, 세제지원은 따로 떨어진 업무가 아닙니다.<br class="pc-br">
               기업의 현재와 다음 단계를 함께 보고 우선순위를 설계합니다.
             </p>
             <div class="keywords">
@@ -124,9 +172,9 @@
         <div class="business-intro">
           <span class="section-no">02</span>
           <p class="eyebrow">OUR BUSINESS</p>
-          <h2>기업 성장의 핵심 영역을<br>하나의 전략으로 연결합니다.</h2>
+          <h2>기업 성장의 핵심 영역을<br class="pc-br">하나의 전략으로 연결합니다.</h2>
           <p class="intro-copy">
-            필요한 제도를 단순히 나열하지 않고,<br>
+            필요한 제도를 단순히 나열하지 않고,<br class="pc-br">
             업력·매출·기술·인력·성장계획을 기준으로 우선순위를 설계합니다.
           </p>
         </div>
@@ -135,28 +183,28 @@
           <article class="business-item active" data-biz="0">
             <span>01</span>
             <h3>기업인증</h3>
-            <p>벤처기업, 기업부설연구소·연구개발전담부서, 메인비즈·이노비즈 등<br> 기업의 성장 단계에 필요한 인증을 검토합니다.</p>
+            <p>벤처기업, 기업부설연구소·연구개발전담부서, 메인비즈·이노비즈 등<br class="pc-br"> 기업의 성장 단계에 필요한 인증을 검토합니다.</p>
             <a href="contact.html">CONSULTATION <b>→</b></a>
           </article>
 
           <article class="business-item" data-biz="1">
             <span>02</span>
             <h3>R&amp;D 지원사업</h3>
-            <p>기술성과 사업화 계획을 기준으로 지원사업을 탐색하고<br> 연구개발 로드맵과 사업계획의 준비 방향을 설계합니다.</p>
+            <p>기술성과 사업화 계획을 기준으로 지원사업을 탐색하고<br class="pc-br"> 연구개발 로드맵과 사업계획의 준비 방향을 설계합니다.</p>
             <a href="contact.html">CONSULTATION <b>→</b></a>
           </article>
 
           <article class="business-item" data-biz="2">
             <span>03</span>
             <h3>정책자금</h3>
-            <p>업력, 재무, 신용, 기존 보증과 자금 현황을 분석해<br> 정책금융 및 보증제도의 적용 가능성을 검토합니다.</p>
+            <p>업력, 재무, 신용, 기존 보증과 자금 현황을 분석해<br class="pc-br"> 정책금융 및 보증제도의 적용 가능성을 검토합니다.</p>
             <a href="contact.html">CONSULTATION <b>→</b></a>
           </article>
 
           <article class="business-item" data-biz="3">
             <span>04</span>
             <h3>절세전략</h3>
-            <p>연구개발, 인력, 기업 형태와 연계 가능한 세제지원 항목을 점검하고<br> 필요한 전문가 협업 영역을 구분합니다.</p>
+            <p>연구개발, 인력, 기업 형태와 연계 가능한 세제지원 항목을 점검하고<br class="pc-br"> 필요한 전문가 협업 영역을 구분합니다.</p>
             <a href="contact.html">CONSULTATION <b>→</b></a>
           </article>
         </div>
@@ -179,11 +227,11 @@
           <span class="section-no reveal-up">03</span>
           <p class="eyebrow reveal-up">FOUNDER MESSAGE</p>
           <h2 class="reveal-up">
-            기업의 상황을 제대로 이해하는 것에서<br>
+            기업의 상황을 제대로 이해하는 것에서<br class="pc-br">
             모든 전략은 시작됩니다.
           </h2>
           <blockquote class="reveal-up">
-            “제도 하나를 권하는 것이 아니라,<br>
+            “제도 하나를 권하는 것이 아니라,<br class="pc-br">
             기업이 지금 무엇부터 준비해야 하는지를 함께 보겠습니다.”
           </blockquote>
           <div class="founder-name reveal-up">
@@ -208,30 +256,30 @@
         <div>
           <span class="section-no reveal-up">04</span>
           <p class="eyebrow reveal-up">HOW WE WORK</p>
-          <h2 class="reveal-up">현황 진단부터 실행까지<br>명확한 순서로 진행합니다.</h2>
+          <h2 class="reveal-up">현황 진단부터 실행까지<br class="pc-br">명확한 순서로 진행합니다.</h2>
         </div>
         <p class="process-desc reveal-up">
           기업마다 필요한 제도와 시기가 다르기 때문에
-          현재 상태를 먼저 파악한 뒤,<br> 적용 가능한 선택지를 좁혀갑니다.
+          현재 상태를 먼저 파악한 뒤,<br class="pc-br"> 적용 가능한 선택지를 좁혀갑니다.
         </p>
       </div>
 
       <div class="process-track">
         <article class="process-step reveal-up">
           <span>01</span><h3>기업 현황 파악</h3>
-          <p>업력, 매출, 인력, 기술, 신용 및 향후 계획을<br> 확인합니다.</p>
+          <p>업력, 매출, 인력, 기술, 신용 및 향후 계획을<br class="pc-br"> 확인합니다.</p>
         </article>
         <article class="process-step reveal-up">
           <span>02</span><h3>적합성 검토</h3>
-          <p>기업에 적용 가능한<br> 인증·자금·지원사업을 선별합니다.</p>
+          <p>기업에 적용 가능한<br class="pc-br"> 인증·자금·지원사업을 선별합니다.</p>
         </article>
         <article class="process-step reveal-up">
           <span>03</span><h3>전략 설계</h3>
-          <p>지원 시기와 준비 기간을 고려해<br> 실행 순서를 설계합니다.</p>
+          <p>지원 시기와 준비 기간을 고려해<br class="pc-br"> 실행 순서를 설계합니다.</p>
         </article>
         <article class="process-step reveal-up">
           <span>04</span><h3>실행 지원</h3>
-          <p>필요 자료와 사업계획,<br> 신청 단계의 실무 준비를 지원합니다.</p>
+          <p>필요 자료와 사업계획,<br class="pc-br"> 신청 단계의 실무 준비를 지원합니다.</p>
         </article>
       </div>
     </div>
@@ -244,7 +292,7 @@
         <div>
           <span class="section-no reveal-up">05</span>
           <p class="eyebrow reveal-up">INSIGHT</p>
-          <h2 class="reveal-up">대표자를 위한<br>실무 인사이트</h2>
+          <h2 class="reveal-up">대표자를 위한<br class="pc-br">실무 인사이트</h2>
         </div>
         <p class="insight-desc reveal-up">
           UPDATE 준비중
@@ -280,7 +328,7 @@
     <div class="closing-inner">
       <p class="reveal-up">SUSTAINABLE STRATEGY &amp; BUSINESS PARTNERS</p>
       <h2 class="reveal-up">
-        기업의 다음 단계,<br>
+        기업의 다음 단계,<br class="pc-br">
         <span>올바른 방향에서 시작합니다.</span>
       </h2>
       <a class="button button-gold reveal-up" href="contact.html">상담 문의하기</a>
