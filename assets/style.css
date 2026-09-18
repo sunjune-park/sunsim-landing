@@ -178,7 +178,7 @@ footer{background:var(--navy-3);padding:58px 0 70px;color:rgba(255,255,255,.58)}
 .contact-main{min-height:100vh;padding:122px 0 78px}
 .contact-page-wrap{width:min(1120px,calc(100% - 64px));margin:0 auto;display:grid;grid-template-columns:1fr .92fr;gap:58px;align-items:start}
 .contact-intro{padding-top:22px}
-.contact-intro h1{font-size:clamp(32px,3.25vw,36px);line-height:1.2;letter-spacing:-.04em;color:var(--navy);margin-top:16px;max-width:560px}
+.contact-intro h1{font-size:clamp(32px,3.25vw,48px);line-height:1.2;letter-spacing:-.04em;color:var(--navy);margin-top:16px;max-width:560px}
 .contact-intro>p:not(.eyebrow){margin-top:18px;max-width:500px;color:var(--muted);font-size:15px;line-height:1.8}
 .contact-brand-panel{margin-top:32px;background:var(--navy);padding:30px 34px;border-radius:22px;display:flex;justify-content:center}
 .contact-form-box{background:white;border:1px solid var(--line);padding:30px 32px 32px;border-radius:22px;box-shadow:0 22px 58px rgba(8,33,51,.09)}
@@ -286,3 +286,18 @@ footer{background:var(--navy-3);padding:58px 0 70px;color:rgba(255,255,255,.58)}
 .founder-copy h2{max-width:760px}
 .process-step h3{font-size:22px}
 .insight-row h3{font-size:22px}
+
+
+/* Footer brand alignment */
+.footer-wrap>div:first-child{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-self:start;
+  width:fit-content;
+  max-width:100%;
+}
+.footer-wrap>div:first-child p{
+  width:100%;
+  text-align:center;
+}
