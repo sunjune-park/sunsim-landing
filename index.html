@@ -22,11 +22,80 @@
       display: inline;
     }
 
-    /* 모바일에서는 PC용 강제 줄바꿈을 없애고 화면 폭에 맞게 자연스럽게 재배치 */
+    .mobile-br {
+      display: none;
+    }
+
+    .mobile-break-block {
+      display: inline;
+    }
+
+    .mobile-space {
+      display: inline;
+    }
+
+    /* 모바일에서는 PC용 강제 줄바꿈을 없애고, 큰 제목만 모바일 전용 줄바꿈 적용 */
     @media (max-width: 760px) {
       .pc-br {
         display: none;
       }
+
+      .mobile-br {
+        display: block;
+      }
+
+      .mobile-break-block {
+        display: block;
+      }
+
+      .founder-copy .mobile-break-block {
+        margin-left: 0;
+      }
+
+      .mobile-space {
+        display: none;
+      }
+
+      /* 모바일 큰 제목 약 10% 축소 */
+      .hero h1 {
+        font-size: 43px !important;
+        line-height: 1.12;
+      }
+
+      .statement {
+        font-size: 38px !important;
+        line-height: 1.16;
+      }
+
+      .business-intro h2,
+      .founder-copy h2,
+      .process-head h2,
+      .insight-head h2 {
+        font-size: 34px !important;
+        line-height: 1.2;
+      }
+
+      .closing-inner h2 {
+        font-size: 41px !important;
+        line-height: 1.12;
+      }
+
+      .business-item h3 {
+        font-size: 29px !important;
+      }
+
+      /* 모바일에서 문장 덩어리가 글자 단위로 찢어지지 않도록 */
+      .hero h1,
+      .statement,
+      .business-intro h2,
+      .founder-copy h2,
+      .process-head h2,
+      .insight-head h2,
+      .closing-inner h2 {
+        word-break: keep-all;
+        overflow-wrap: normal;
+      }
+
 
       .hero h1,
       .hero-copy,
@@ -94,7 +163,7 @@
       <p class="hero-kicker reveal-up">SUSTAINABLE STRATEGY &amp; BUSINESS PARTNERS</p>
       <h1 class="reveal-up delay-1">
         <small class="hero-company">선심 비즈파트너스의</small>
-        바른 마음으로 만드는<br class="pc-br">
+        바른 마음으로 만드는<br class="pc-br"><br class="mobile-br">
         <span>더 나은 내일</span>
       </h1>
       <p class="hero-copy reveal-up delay-2">
@@ -130,8 +199,8 @@
         </div>
         <div>
           <p class="statement reveal-lines">
-            기업에 필요한 것은<br class="pc-br">
-            더 많은 정보가 아니라<br class="pc-br">
+            기업에 필요한 것은<br class="pc-br"><br class="mobile-br">
+            더 많은 정보가 아니라<br class="pc-br"><br class="mobile-br">
             <em>올바른 방향과 순서</em>입니다.
           </p>
           <div class="philosophy-foot reveal-up">
@@ -172,7 +241,7 @@
         <div class="business-intro">
           <span class="section-no">02</span>
           <p class="eyebrow">OUR BUSINESS</p>
-          <h2>기업 성장의 핵심 영역을<br class="pc-br">하나의 전략으로 연결합니다.</h2>
+          <h2>기업 성장의 핵심 영역을<br class="pc-br"><br class="mobile-br">하나의 전략으로 연결합니다.</h2>
           <p class="intro-copy">
             필요한 제도를 단순히 나열하지 않고,<br class="pc-br">
             업력·매출·기술·인력·성장계획을 기준으로 우선순위를 설계합니다.
@@ -227,7 +296,7 @@
           <span class="section-no reveal-up">03</span>
           <p class="eyebrow reveal-up">FOUNDER MESSAGE</p>
           <h2 class="reveal-up">
-            기업의 상황을 제대로 이해하는 것에서<br class="pc-br">
+            기업의 상황을 제대로<span class="mobile-break-block"><span class="mobile-space"> </span>이해하는 것에서</span><br class="pc-br"><br class="mobile-br">
             모든 전략은 시작됩니다.
           </h2>
           <blockquote class="reveal-up">
@@ -256,7 +325,7 @@
         <div>
           <span class="section-no reveal-up">04</span>
           <p class="eyebrow reveal-up">HOW WE WORK</p>
-          <h2 class="reveal-up">현황 진단부터 실행까지<br class="pc-br">명확한 순서로 진행합니다.</h2>
+          <h2 class="reveal-up">현황 진단부터 실행까지<br class="pc-br"><br class="mobile-br">명확한 순서로 진행합니다.</h2>
         </div>
         <p class="process-desc reveal-up">
           기업마다 필요한 제도와 시기가 다르기 때문에
@@ -292,7 +361,7 @@
         <div>
           <span class="section-no reveal-up">05</span>
           <p class="eyebrow reveal-up">INSIGHT</p>
-          <h2 class="reveal-up">대표자를 위한<br class="pc-br">실무 인사이트</h2>
+          <h2 class="reveal-up">대표자를 위한<br class="pc-br"><br class="mobile-br">실무 인사이트</h2>
         </div>
         <p class="insight-desc reveal-up">
           UPDATE 준비중
@@ -328,7 +397,7 @@
     <div class="closing-inner">
       <p class="reveal-up">SUSTAINABLE STRATEGY &amp; BUSINESS PARTNERS</p>
       <h2 class="reveal-up">
-        기업의 다음 단계,<br class="pc-br">
+        기업의 다음 단계,<br class="pc-br"><br class="mobile-br">
         <span>올바른 방향에서 시작합니다.</span>
       </h2>
       <a class="button button-gold reveal-up" href="contact.html">상담 문의하기</a>
