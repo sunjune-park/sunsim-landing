@@ -301,3 +301,52 @@ footer{background:var(--navy-3);padding:58px 0 70px;color:rgba(255,255,255,.58)}
   width:100%;
   text-align:center;
 }
+
+/* Insight articles and archive */
+.insight-more{display:inline-flex;align-items:center;gap:12px;margin-top:28px;color:var(--navy);font-size:13px;font-weight:800;border-bottom:1px solid var(--gold);padding-bottom:7px}
+.insight-more:hover,.article-end a:hover,.article-sources a:hover{color:var(--gold-deep)}
+.insight-page{background:var(--paper)}
+.article-main{padding:150px 0 115px;min-height:72vh}
+.article-wrap{width:min(860px,calc(100% - 64px));margin:auto}
+.article-breadcrumb{display:flex;gap:12px;align-items:center;color:var(--muted);font-size:12px;font-weight:700;letter-spacing:.1em}
+.article-breadcrumb a:hover{color:var(--gold-deep)}
+.article-heading{margin-top:55px;padding-bottom:44px;border-bottom:1px solid var(--line)}
+.article-heading h1{font-size:clamp(36px,4vw,58px);letter-spacing:-.05em;line-height:1.22;word-break:keep-all;color:var(--navy);margin-top:16px}
+.article-date{color:var(--muted);font-size:13px;margin-top:24px}
+.article-content{font-size:17px;line-height:1.9;word-break:keep-all;color:#344651}
+.article-lead{font-size:21px;line-height:1.75;color:var(--navy);font-weight:600;margin:44px 0 58px}
+.article-content section{margin:0 0 48px}
+.article-content h2{font-size:25px;line-height:1.35;letter-spacing:-.035em;color:var(--navy);margin:0 0 18px}
+.article-content p+p{margin-top:16px}
+.article-check{margin:58px 0 28px;background:var(--ivory);border-left:3px solid var(--gold);padding:30px 36px}
+.article-check h2{font-size:20px;margin-bottom:14px}
+.article-check ul{padding-left:20px}
+.article-check li+li{margin-top:6px}
+.article-note,.archive-note{color:var(--muted);font-size:13px;line-height:1.7}
+.article-sources{margin-top:64px;padding-top:28px;border-top:1px solid var(--line)}
+.article-sources h2{font-size:14px;color:var(--navy);margin-bottom:12px}
+.article-sources ul{list-style:none}
+.article-sources li{font-size:13px;color:var(--muted);margin:7px 0}
+.article-end{display:flex;justify-content:space-between;gap:16px;border-top:1px solid var(--line);padding-top:26px;margin-top:45px;font-size:14px;font-weight:750;color:var(--navy)}
+.article-table-wrap{overflow-x:auto;margin:22px 0}
+.article-content table{width:100%;border-collapse:collapse;min-width:570px;font-size:14px;line-height:1.6}
+.article-content th,.article-content td{text-align:left;vertical-align:top;padding:15px;border-bottom:1px solid var(--line)}
+.article-content thead{background:var(--navy);color:white}
+.article-content tbody th{width:130px;color:var(--navy)}
+.archive-wrap{width:min(1050px,calc(100% - 64px))}
+.archive-intro{color:var(--muted);font-size:17px;line-height:1.7;margin-top:18px}
+.archive-wrap .insight-list{margin-top:42px}
+.archive-wrap .insight-row h2{font-size:20px;color:var(--navy);font-weight:650}
+.archive-note{margin-top:28px}
+@media(max-width:760px){
+  .article-main{padding:110px 0 75px}
+  .article-wrap,.archive-wrap{width:calc(100% - 40px)}
+  .article-heading{margin-top:35px;padding-bottom:32px}
+  .article-heading h1{font-size:37px}
+  .article-content{font-size:16px}
+  .article-lead{font-size:19px;margin:36px 0 44px}
+  .article-content h2{font-size:23px}
+  .article-check{padding:24px 20px}
+  .article-end{flex-wrap:wrap}
+  .archive-wrap .insight-row{grid-template-columns:1fr}
+}
