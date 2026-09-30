@@ -4,3 +4,14 @@ http://xn--h50b581ak7agih11enoa.com/* https://ssbp.co.kr/:splat 301!
 https://xn--h50b581ak7agih11enoa.com/* https://ssbp.co.kr/:splat 301!
 http://www.xn--h50b581ak7agih11enoa.com/* https://ssbp.co.kr/:splat 301!
 https://www.xn--h50b581ak7agih11enoa.com/* https://ssbp.co.kr/:splat 301!
+
+# Preserve inbound links after the directory URL migration.
+/contact.html /contact/ 301!
+/insights/index.html /insight/ 301!
+/insights/ /insight/ 301!
+/insights/rnd-preparation.html /insight/rnd-preparation/ 301!
+/insights/rnd-preparation /insight/rnd-preparation/ 301!
+/insights/funding-checklist.html /insight/funding-checklist/ 301!
+/insights/funding-checklist /insight/funding-checklist/ 301!
+/insights/lab-vs-department.html /insight/lab-vs-department/ 301!
+/insights/lab-vs-department /insight/lab-vs-department/ 301!

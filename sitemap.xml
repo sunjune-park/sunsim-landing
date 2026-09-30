@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://ssbp.co.kr/</loc></url>
-  <url><loc>https://ssbp.co.kr/contact.html</loc></url>
-  <url><loc>https://ssbp.co.kr/insights/</loc></url>
-  <url><loc>https://ssbp.co.kr/insights/rnd-preparation.html</loc></url>
-  <url><loc>https://ssbp.co.kr/insights/funding-checklist.html</loc></url>
-  <url><loc>https://ssbp.co.kr/insights/lab-vs-department.html</loc></url>
+  <url><loc>https://ssbp.co.kr/services/</loc></url>
+  <url><loc>https://ssbp.co.kr/certification/</loc></url>
+  <url><loc>https://ssbp.co.kr/rnd/</loc></url>
+  <url><loc>https://ssbp.co.kr/policy-fund/</loc></url>
+  <url><loc>https://ssbp.co.kr/insight/</loc></url>
+  <url><loc>https://ssbp.co.kr/about/</loc></url>
+  <url><loc>https://ssbp.co.kr/contact/</loc></url>
+  <url><loc>https://ssbp.co.kr/insight/rnd-preparation/</loc></url>
+  <url><loc>https://ssbp.co.kr/insight/funding-checklist/</loc></url>
+  <url><loc>https://ssbp.co.kr/insight/lab-vs-department/</loc></url>
 </urlset>
