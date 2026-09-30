@@ -463,12 +463,11 @@ footer{background:var(--navy-3);padding:58px 0 70px;color:rgba(255,255,255,.58)}
 }
 
 /* Service hierarchy: overview link with four service destinations */
-.nav-service{position:relative;display:flex;align-items:center;gap:2px}
-.service-menu summary{display:flex;align-items:center;justify-content:center;width:28px;height:40px;list-style:none;cursor:pointer;color:var(--gold-light);font-size:18px}
-.service-menu summary::-webkit-details-marker{display:none}
-.service-menu summary:focus-visible{outline:2px solid var(--gold-light);outline-offset:2px;border-radius:4px}
-.service-menu[open] summary span{transform:rotate(180deg)}
-.service-submenu{position:absolute;top:100%;left:-18px;width:180px;padding:10px;background:var(--navy);border:1px solid rgba(201,169,106,.4);border-radius:10px;box-shadow:0 12px 28px rgba(0,0,0,.2)}
+.nav-service{position:relative}
+.desktop-nav .service-overview{position:relative;display:block;padding:8px 0}
+.service-overview::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;background:var(--gold-light)}
+.service-submenu{display:none;position:absolute;top:100%;left:-18px;width:180px;padding:10px;background:var(--navy);border:1px solid rgba(201,169,106,.4);border-radius:10px;box-shadow:0 12px 28px rgba(0,0,0,.2)}
+.nav-service:hover .service-submenu,.nav-service:focus-within .service-submenu{display:block}
 .desktop-nav .service-submenu a{display:block;padding:12px 14px;font-size:13px;border-radius:5px}
 .desktop-nav .service-submenu a:hover,.desktop-nav .service-submenu a:focus-visible{background:var(--navy-2);color:var(--gold-light)}
 .mobile-menu-panel{display:flex;flex-direction:column;max-height:calc(100dvh - 100px);overflow-y:auto}
