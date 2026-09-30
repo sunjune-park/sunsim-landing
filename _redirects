@@ -1,5 +1,5 @@
 # Permanent migration from the legacy Korean IDN to the canonical domain.
-# Keep separate HTTP and HTTPS rules so every legacy request redirects directly.
+# Netlify Force HTTPS may upgrade HTTP on the same host before these domain rules run.
 http://xn--h50b581ak7agih11enoa.com/* https://ssbp.co.kr/:splat 301!
 https://xn--h50b581ak7agih11enoa.com/* https://ssbp.co.kr/:splat 301!
 http://www.xn--h50b581ak7agih11enoa.com/* https://ssbp.co.kr/:splat 301!
