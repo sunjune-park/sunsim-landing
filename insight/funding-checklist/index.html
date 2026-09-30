@@ -48,12 +48,20 @@
   <div class="nav-wrap">
     <a href="/" class="brand" aria-label="선심비즈파트너스 홈"><img src="/assets/ssbp_logo_exact.png" alt="SSBP 선심 BIZ PARTNERS"></a>
     <nav class="desktop-nav" aria-label="주요 메뉴">
-      <a href="/services/">서비스소개</a>
-      <a href="/certification/">기업인증</a>
-      <a href="/rnd/">R&amp;D</a>
-      <a href="/policy-fund/">정책자금</a>
-      <a href="/insight/">Insight</a>
       <a href="/about/">회사소개</a>
+      <div class="nav-service">
+        <a href="/services/">서비스소개</a>
+        <details class="service-menu">
+          <summary aria-label="서비스 하위 메뉴 열기"><span aria-hidden="true">⌄</span></summary>
+          <div class="service-submenu">
+            <a href="/certification/">기업인증</a>
+            <a href="/rnd/">R&amp;D</a>
+            <a href="/policy-fund/">정책자금</a>
+            <a href="/services/#management">경영컨설팅</a>
+          </div>
+        </details>
+      </div>
+      <a href="/insight/">Insight</a>
       <a href="/contact/" class="nav-contact">상담문의</a>
     </nav>
     <div class="social-links" aria-label="공식 채널">
@@ -64,13 +72,18 @@
     <details class="mobile-menu">
       <summary aria-label="전체 메뉴 열기">메뉴 <span aria-hidden="true">☰</span></summary>
       <nav class="mobile-menu-panel" aria-label="모바일 주요 메뉴">
-      <a href="/services/">서비스소개</a>
-      <a href="/certification/">기업인증</a>
-      <a href="/rnd/">R&amp;D</a>
-      <a href="/policy-fund/">정책자금</a>
-      <a href="/insight/">Insight</a>
-      <a href="/about/">회사소개</a>
-      <a href="/contact/" class="nav-contact">상담문의</a>
+        <a href="/about/">회사소개</a>
+        <div class="mobile-service-group">
+          <a href="/services/">서비스소개</a>
+          <div class="mobile-service-submenu" aria-label="서비스 하위 메뉴">
+            <a href="/certification/">기업인증</a>
+            <a href="/rnd/">R&amp;D</a>
+            <a href="/policy-fund/">정책자금</a>
+            <a href="/services/#management">경영컨설팅</a>
+          </div>
+        </div>
+        <a href="/insight/">Insight</a>
+        <a href="/contact/" class="nav-contact">상담문의</a>
       </nav>
     </details>
   </div>
