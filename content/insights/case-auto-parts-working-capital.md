@@ -4,10 +4,13 @@
   "title": "자동차부품 제조기업 사례: 운전자금 2억원 조달과 연구기반 구축",
   "description": "창업 3년 미만 자동차부품 제조기업의 운전자금 2억원 조달 사례입니다. 시설자금 추가 조달은 후속 계획으로 구분합니다.",
   "category": "컨설팅 사례",
-  "status": "draft",
+  "status": "published",
   "format": "markdown",
   "queue": 3,
-  "source_number": 20
+  "source_number": 20,
+  "published": "2026-10-28",
+  "modified": "2026-10-28",
+  "published_batch": "2026-10-28"
 }
 +++
 ### 사례 당시 기업 현황

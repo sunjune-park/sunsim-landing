@@ -4,10 +4,13 @@
   "title": "정책자금·은행대출·보증부대출, 어떻게 다를까?",
   "description": "정책기관 융자, 일반 은행대출, 보증부대출의 차이와 자금조달 전 확인할 항목을 정리합니다.",
   "category": "자금조달",
-  "status": "draft",
+  "status": "published",
   "format": "markdown",
   "queue": 1,
-  "source_number": 2
+  "source_number": 2,
+  "published": "2026-10-28",
+  "modified": "2026-10-28",
+  "published_batch": "2026-10-28"
 }
 +++
 사업자금이 필요할 때는 금리뿐 아니라 자금이 공급되는 구조부터 구분해야 합니다. 정책기관의 융자, 일반 은행대출, 보증부대출은 심사 주체와 진행 절차가 다릅니다.

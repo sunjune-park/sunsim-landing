@@ -4,10 +4,13 @@
   "title": "정책자금 준비의 출발점, 재무제표 읽는 법",
   "description": "매출과 이익, 자산과 부채를 함께 살펴보고 자금조달 전에 확인해야 할 재무 항목을 정리합니다.",
   "category": "재무·경영",
-  "status": "draft",
+  "status": "published",
   "format": "markdown",
   "queue": 2,
-  "source_number": 11
+  "source_number": 11,
+  "published": "2026-10-28",
+  "modified": "2026-10-28",
+  "published_batch": "2026-10-28"
 }
 +++
 재무제표는 세금 신고를 위한 자료이면서 기업의 운영 상태를 설명하는 경영자료입니다. 정책자금이나 보증을 준비한다면 매출액 하나보다 이익, 부채, 자본과 현금 회수 구조를 함께 살펴봐야 합니다.
