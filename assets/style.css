@@ -420,6 +420,10 @@ footer{background:var(--navy-3);padding:58px 0 70px;color:rgba(255,255,255,.58)}
 .article-related a{font-size:15px;line-height:1.7;color:var(--navy);word-break:keep-all;overflow-wrap:break-word}
 .article-related a:hover{text-decoration:underline}
 .article-service-link{margin-top:24px}
+.article-markdown ul,.article-markdown ol{padding-left:24px;margin:18px 0}
+.article-markdown li+li{margin-top:8px}
+.article-markdown a{text-decoration:underline;text-underline-offset:3px;color:var(--navy)}
+.article-markdown>p+section{margin-top:38px}
 .contact-main>.page-wrap{margin-bottom:26px}
 .contact-page-wrap>*,.form-grid>*{min-width:0}
 .form-grid input,.form-grid select{width:100%;min-width:0}

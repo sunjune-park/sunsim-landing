@@ -1,0 +1,26 @@
++++
+{
+  "slug": "policy-fund-rejection-reasons",
+  "title": "매출은 나오는데 왜 정책자금이 안 나올까?",
+  "description": "매출 외에 정책자금 준비 시 살펴볼 차입금, 세금·신용, 재무제표와 자금 사용계획을 중소기업 대표의 관점에서 정리합니다.",
+  "category": "FUNDING",
+  "published": "2026-10-12",
+  "status": "published",
+  "format": "html",
+  "order": 3,
+  "subtitle": "기업 대표가 놓치기 쉬운 자금조달 준비"
+}
++++
+<div class="article-content"><p class="article-lead">“매출도 잘 나오는데 왜 자금이 안 될까요?” 정책자금이나 보증 상담을 준비하는 기업이라면 충분히 할 수 있는 질문입니다. 매출이 높으면 자금조달도 자연스럽게 쉬워질 것이라고 생각하기 쉽지만, 기업자금 심사에서는 매출 외에도 여러 요소가 함께 검토됩니다.</p>
+<section><h2>매출보다 중요한 것은 ‘전체 구조’일 수 있습니다</h2><p>예를 들어 연매출이 높더라도 기존 차입금이 많다면 추가 자금조달 여력이 줄어들 수 있습니다. 반대로 매출 규모가 아직 크지 않더라도 부채가 적고 성장성이 명확한 기업이라면 다른 관점에서 검토될 수 있습니다.</p><p>매출액 하나만으로 결과를 예측하기보다 기업의 현금흐름과 상환능력, 기존 자금조달 현황을 함께 살펴봐야 합니다. 적용되는 판단기준은 기관과 자금 종류에 따라 다릅니다.</p></section>
+<section><h2>세금과 신용관리는 기본입니다</h2><p>대표자나 기업에 연체가 있거나 국세·지방세 체납 문제가 있다면 자금조달 과정에서 제약이 생길 수 있습니다. 정책자금을 알아보기 전에 세금 납부상태, 신용정보, 기존 대출현황 등을 정리하는 것이 먼저입니다.</p><p>지원 제외사항과 예외 적용 여부는 사업별 공고에서 확인해야 합니다. 한 가지 항목만 보고 신청 가능 여부를 단정하지 않는 것이 좋습니다.</p></section>
+<section><h2>재무제표가 회사의 사업내용을 보여주는지도 봐야 합니다</h2><p>대표님이 생각하는 회사의 상황과 재무제표가 보여주는 모습이 다를 때가 있습니다. 매출은 크게 늘었는데 이익이 낮거나, 가지급금이나 과도한 부채 등 설명이 필요한 항목이 있을 수 있습니다.</p><p>사업이 커질수록 세무와 자금조달을 따로 생각하지 않는 것이 중요합니다. 자료는 실제 거래에 맞게 정확히 정리하고, 설명이 필요한 항목은 세무·회계 전문가와 확인하세요.</p></section>
+<section><h2>자금 사용계획이 명확해야 합니다</h2><p>“운영비가 필요하다”보다 구체적인 계획이 필요합니다. 어떤 설비를 구입할 것인지, 어떤 직원을 채용할 것인지, 자금을 투입했을 때 사업이 어떻게 달라지는지 등을 정리하면 회사의 자금수요를 더 명확하게 설명할 수 있습니다.</p><p>필요한 금액과 사용 시기, 상환 재원도 함께 검토해야 합니다. 신청 자금에서 인정하는 용도와 실제 사용계획이 맞는지도 확인하세요.</p><p>자금조달은 신청서를 제출하는 순간 시작되는 것이 아닙니다. <strong>몇 달 전부터 재무, 세무, 신용, 투자계획을 함께 관리하는 것</strong>이 중요합니다.</p></section>
+<div class="article-check"><h2>우리 기업을 위한 체크포인트</h2><ul><li>기존 차입금과 상환 일정을 파악했는가</li><li>세금 납부상태와 신용정보를 확인했는가</li><li>재무자료와 자금의 용도·사용 시기·상환계획을 정리했는가</li></ul></div>
+<p class="article-note">정책자금과 보증의 신청요건·심사기준은 기관 및 사업에 따라 다릅니다. 개별 기업의 승인 가능성은 별도 심사를 통해 결정됩니다.</p>
+<section class="article-check"><h2>우리 기업의 다음 단계를 함께 검토해보세요</h2><p>기업의 현황과 고민을 남겨주시면 필요한 준비 방향을 함께 살펴보겠습니다.</p><p><a class="text-link" href="https://pf.kakao.com/_UxmdMX" target="_blank" rel="noopener noreferrer">카카오톡 상담 ↗</a></p><p><a class="text-link" href="/contact/">홈페이지 상담 문의 →</a></p></section>
+</div>
+<aside class="article-sources"><h2>참고 자료</h2><ul><li><a href="https://www.kosmes.or.kr/" target="_blank" rel="noopener noreferrer">중소벤처기업진흥공단 · 정책자금 안내 ↗</a></li></ul></aside>
+<aside class="article-related"><h2>관련 글</h2><ul><li><a href="/insight/funding-checklist/">정책자금 신청 전 대표자가 확인해야 할 기본 항목 →</a></li><li><a href="/insight/annual-support-roadmap/">정부지원사업은 연초에만 준비하면 늦습니다 →</a></li></ul></aside>
+<p class="article-service-link"><a class="text-link" href="/policy-fund/">관련 컨설팅 서비스 →</a></p>
+<div class="article-end"><a href="/insight/">← 전체 글 보기</a><a href="/contact/">상담 문의 →</a></div>

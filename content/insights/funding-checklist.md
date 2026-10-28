@@ -1,0 +1,23 @@
++++
+{
+  "slug": "funding-checklist",
+  "title": "정책자금 신청 전 대표자가 확인해야 할 기본 항목",
+  "description": "정책자금 상담 전 자금 용도, 기업 현황, 제한 사유, 상환계획을 정리하는 실무 체크리스트.",
+  "category": "FUNDING",
+  "published": "2026-09-29",
+  "status": "published",
+  "format": "html",
+  "order": 8
+}
++++
+<div class="article-content"><p class="article-lead">정책자금은 “얼마를 받을 수 있나”보다 “어떤 자금을 왜, 언제 써야 하나”부터 정리하는 편이 정확합니다. 자금마다 대상과 심사 기준이 다르므로 기업 현황을 먼저 확인해야 합니다.</p>
+<section><h2>01. 자금의 용도부터 구분하기</h2><p>운전자금인지 시설자금인지, 구체적으로 어디에 쓸 것인지 적어보세요. 설비 견적, 채용계획, 원재료 구매, 프로젝트 수행비처럼 사용 목적을 설명할 자료가 있으면 필요한 규모와 시기를 계산하기 쉬워집니다.</p></section>
+<section><h2>02. 기업 기본정보를 한 장으로 정리하기</h2><p>사업자 유형, 설립일, 실제 영위 업종, 최근 매출·손익, 고용인원, 기존 차입과 보증 잔액을 확인하세요. 같은 대표자가 여러 사업체를 운영한다면 각 사업체의 거래와 자금 사용 목적도 구분해두는 것이 좋습니다.</p></section>
+<section><h2>03. 신청 제한 가능성 확인하기</h2><p>국세·지방세 체납, 연체 등 신용정보, 휴·폐업 상태, 지원 제외 업종 여부는 사전에 확인할 항목입니다. 중진공의 정책자금 온라인 신청에도 사전기업진단과 융자제한기업 확인 단계가 있습니다. 다른 기관의 기준은 별도로 확인해야 합니다.</p></section>
+<section><h2>04. 상환과 실행 일정을 함께 보기</h2><p>융자는 상환해야 하는 자금입니다. 예상 매출 유입 시기와 원리금 상환 여력을 함께 검토하세요. 접수 가능 여부와 예산은 지역·자금·시기에 따라 달라지므로, 신청 직전 공식 공고와 관할 기관 안내를 다시 확인해야 합니다.</p></section>
+<div class="article-check"><h2>상담 전 준비할 5가지</h2><ul><li>자금 용도와 필요한 금액·시기</li><li>최근 재무 및 매출 자료</li><li>기존 대출·보증 현황</li><li>체납·연체 및 제외 업종 여부</li><li>자금 집행계획과 상환계획</li></ul></div>
+<p class="article-note">이 글은 중소기업 정책자금 준비를 위한 일반 점검 항목입니다. 신청 가능 여부와 조건은 각 기관의 최신 공고·심사 결과에 따릅니다.</p></div>
+  <aside class="article-sources"><h2>참고 자료</h2><ul><li><a href="https://digital.kosmes.or.kr/dh/PLFD/APPLY/PSTEP000M0.do" target="_blank" rel="noopener noreferrer">중소벤처기업진흥공단 정책자금 신청 절차 ↗</a></li>
+<li><a href="https://www.kosmes.or.kr/nsh/SH/SBI/SHSBI002M0.do" target="_blank" rel="noopener noreferrer">중소벤처기업진흥공단 융자제한기업 안내 ↗</a></li></ul></aside>
+  <aside class="article-related"><h2>관련 글</h2><ul><li><a href="/insight/rnd-preparation/">R&amp;D 지원사업 준비 전에 먼저 점검해야 할 것 →</a></li><li><a href="/insight/lab-vs-department/">기업부설연구소와 연구개발전담부서의 차이 →</a></li></ul></aside><p class="article-service-link"><a class="text-link" href="/policy-fund/">관련 컨설팅 서비스 →</a></p>
+  <div class="article-end"><a href="/insight/">← 전체 글 보기</a><a href="/contact/">상담 문의 →</a></div>

@@ -1,4 +1,4 @@
-"""Apply shared header/footer to committed static HTML. No deployment build required."""
+"""Sync shared layout into static source pages; Insight is generated at build."""
 from pathlib import Path
 import re
 
@@ -6,7 +6,7 @@ root = Path(__file__).resolve().parents[1]
 parts = {name: (root / 'partials' / (name + '.html')).read_text().strip()
          for name in ('header', 'footer')}
 for page in root.rglob('*.html'):
-    if 'partials' in page.parts:
+    if set(page.relative_to(root).parts) & {'partials', 'templates', 'content', 'dist', 'tests'}:
         continue
     text = page.read_text()
     for name, fragment in parts.items():

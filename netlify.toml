@@ -1,0 +1,3 @@
+[build]
+  command = "python3 scripts/insights.py build"
+  publish = "dist"
