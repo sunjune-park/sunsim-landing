@@ -4,10 +4,13 @@
   "title": "기업인증 선택 기준: 개수보다 사업 목적이 먼저입니다",
   "description": "기업의 기술·인력·성장계획에 맞춰 기업인증과 연구조직의 준비 순서를 정하는 방법을 살펴봅니다.",
   "category": "기업인증",
-  "status": "draft",
+  "status": "published",
   "format": "markdown",
   "queue": 4,
-  "source_number": 13
+  "source_number": 13,
+  "published": "2026-10-29",
+  "modified": "2026-10-29",
+  "published_batch": "2026-10-29"
 }
 +++
 기업인증을 준비할 때는 취득 가능한 제도의 목록보다 사용 목적을 먼저 정해야 합니다. 거래처 요구, 연구개발 체계, 지원사업 준비 등 목적이 달라지면 필요한 제도와 준비 순서도 달라집니다.

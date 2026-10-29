@@ -4,10 +4,13 @@
   "title": "이노비즈와 메인비즈, 우리 기업에 맞는 선택 기준",
   "description": "기술혁신과 경영혁신의 차이를 바탕으로 이노비즈·메인비즈를 검토할 때 필요한 자료와 판단 기준을 정리합니다.",
   "category": "기업인증",
-  "status": "draft",
+  "status": "published",
   "format": "markdown",
   "queue": 5,
-  "source_number": 14
+  "source_number": 14,
+  "published": "2026-10-29",
+  "modified": "2026-10-29",
+  "published_batch": "2026-10-29"
 }
 +++
 이노비즈는 기술혁신형 중소기업, 메인비즈는 경영혁신형 중소기업을 대상으로 하는 제도입니다. 어느 쪽이 더 좋은지보다 우리 회사가 어떤 혁신 활동을 실제로 수행하고 있는지가 선택의 출발점입니다.

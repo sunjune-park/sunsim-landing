@@ -4,10 +4,13 @@
   "title": "광고대행업 사례: 매출 5억원 단계에서 운영자금 3억원 조달",
   "description": "창업 3년 미만 광고대행기업이 프로젝트 수행비와 매출 회수 구조를 정리해 운영자금 3억원을 조달한 사례입니다.",
   "category": "컨설팅 사례",
-  "status": "draft",
+  "status": "published",
   "format": "markdown",
   "queue": 6,
-  "source_number": 21
+  "source_number": 21,
+  "published": "2026-10-29",
+  "modified": "2026-10-29",
+  "published_batch": "2026-10-29"
 }
 +++
 ### 사례 당시 기업 현황
