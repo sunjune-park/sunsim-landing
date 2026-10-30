@@ -4,10 +4,13 @@
   "title": "기술보증기금, 기술과 사업계획은 어떻게 준비할까?",
   "description": "기술보증을 검토하는 기업이 기술의 차별성, 사업화 가능성, 재무현황과 자금 사용계획을 함께 정리하는 방법입니다.",
   "category": "자금조달",
-  "status": "draft",
+  "status": "published",
   "format": "markdown",
   "queue": 8,
-  "source_number": 16
+  "source_number": 16,
+  "published": "2026-10-30",
+  "modified": "2026-10-30",
+  "published_batch": "2026-10-30"
 }
 +++
 기술보증을 준비할 때는 보유한 기술의 차별성과 그 기술을 사업으로 연결하는 계획을 함께 설명해야 합니다. 기술이 있다는 주장뿐 아니라 개발·검증·판매로 이어지는 근거가 필요합니다.

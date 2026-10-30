@@ -4,10 +4,13 @@
   "title": "신용보증기금 보증부대출, 어떤 구조로 진행될까?",
   "description": "신용보증기금의 보증과 은행 대출의 역할을 구분하고, 상담 전에 정리할 재무·거래·자금 자료를 안내합니다.",
   "category": "자금조달",
-  "status": "draft",
+  "status": "published",
   "format": "markdown",
   "queue": 7,
-  "source_number": 15
+  "source_number": 15,
+  "published": "2026-10-30",
+  "modified": "2026-10-30",
+  "published_batch": "2026-10-30"
 }
 +++
 담보가 부족한 기업은 신용보증기금의 보증을 활용한 자금조달을 검토할 수 있습니다. 기본적으로 신용보증기금은 기업의 채무를 보증하고, 은행 등 금융기관은 그 보증을 바탕으로 대출을 검토하는 구조입니다.

@@ -4,10 +4,13 @@
   "title": "제품디자인·OEM 사례: 기존 차입금 1억 5천만원에서 추가 1억원 조달",
   "description": "제품디자인·OEM 기업의 추가 운영자금 1억원 조달 사례입니다. 수출·특허 관련 바우처는 진행 중인 과제로 구분합니다.",
   "category": "컨설팅 사례",
-  "status": "draft",
+  "status": "published",
   "format": "markdown",
   "queue": 9,
-  "source_number": 22
+  "source_number": 22,
+  "published": "2026-10-30",
+  "modified": "2026-10-30",
+  "published_batch": "2026-10-30"
 }
 +++
 ### 사례 당시 기업 현황
