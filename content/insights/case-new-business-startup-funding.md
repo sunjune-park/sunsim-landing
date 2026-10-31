@@ -4,10 +4,13 @@
   "title": "신규창업 사례: 매출 100만원 단계에서 창업기반자금 1억원 조달",
   "description": "제품디자인·OEM·도소매 신규창업자의 자금조달 사례입니다. 확보한 1억원과 후속 자금조달 계획을 구분합니다.",
   "category": "컨설팅 사례",
-  "status": "draft",
+  "status": "published",
   "format": "markdown",
   "queue": 12,
-  "source_number": 23
+  "source_number": 23,
+  "published": "2026-10-31",
+  "modified": "2026-10-31",
+  "published_batch": "2026-10-31"
 }
 +++
 ### 사례 당시 기업 현황

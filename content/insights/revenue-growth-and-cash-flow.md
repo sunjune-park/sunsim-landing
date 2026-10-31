@@ -4,10 +4,13 @@
   "title": "매출은 늘었는데 현금이 부족한 이유: 재무 점검 5가지",
   "description": "매출 증가가 현금흐름 개선으로 이어지지 않는 이유를 비용, 매출채권, 재고, 차입금, 자본으로 나눠 살펴봅니다.",
   "category": "재무·경영",
-  "status": "draft",
+  "status": "published",
   "format": "markdown",
   "queue": 10,
-  "source_number": 12
+  "source_number": 12,
+  "published": "2026-10-31",
+  "modified": "2026-10-31",
+  "published_batch": "2026-10-31"
 }
 +++
 매출 증가가 곧 현금 증가를 뜻하지는 않습니다. 손익계산서에 이익이 있어도 대금을 아직 받지 못했거나 재고와 설비에 자금이 투입됐다면 운영자금은 부족할 수 있습니다.
