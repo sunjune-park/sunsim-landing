@@ -4,10 +4,13 @@
   "title": "도소매기업 사례: 사업모델 재정비와 자금 2억원 조달",
   "description": "기존 도소매 사업의 경쟁력과 성장계획을 정리한 자금 2억원 조달 사례입니다. 창업도약패키지는 준비 단계로 구분합니다.",
   "category": "컨설팅 사례",
-  "status": "draft",
+  "status": "published",
   "format": "markdown",
   "queue": 14,
-  "source_number": 24
+  "source_number": 24,
+  "published": "2026-11-01",
+  "modified": "2026-11-01",
+  "published_batch": "2026-11-01"
 }
 +++
 ### 사례 당시 기업 현황

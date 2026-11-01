@@ -4,10 +4,13 @@
   "title": "의류디자인 창업 사례: 매출 300만원 단계에서 자금 1억원 조달",
   "description": "창업 1년 미만 의류디자인 기업이 제품 생산·판매·자금 사용계획을 정리해 사업자금 1억원을 조달한 사례입니다.",
   "category": "컨설팅 사례",
-  "status": "draft",
+  "status": "published",
   "format": "markdown",
   "queue": 15,
-  "source_number": 25
+  "source_number": 25,
+  "published": "2026-11-01",
+  "modified": "2026-11-01",
+  "published_batch": "2026-11-01"
 }
 +++
 ### 사례 당시 기업 현황

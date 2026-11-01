@@ -4,10 +4,13 @@
   "title": "ISO 9001·14001·45001, 우리 회사에 필요한 인증은?",
   "description": "품질·환경·안전보건경영시스템의 차이를 비교하고 거래처 요구, 인증 범위, 유지관리 항목을 점검합니다.",
   "category": "기업인증",
-  "status": "draft",
+  "status": "published",
   "format": "markdown",
   "queue": 13,
-  "source_number": 18
+  "source_number": 18,
+  "published": "2026-11-01",
+  "modified": "2026-11-01",
+  "published_batch": "2026-11-01"
 }
 +++
 ISO 관련 인증을 검토할 때는 거래처가 요구하는 표준과 우리 회사의 운영 과제부터 확인합니다. 품질, 환경, 안전보건은 서로 다른 관리 영역입니다.
